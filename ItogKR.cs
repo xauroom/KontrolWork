@@ -15,6 +15,31 @@ public static class Program
     public static void Main()
     {
         Console.Clear();
-        
+        string[] rowArray = new [] {“Hello”, “2”, “world”, “:-)”, “1234”, “1567”, “-2”, “computer science”, “Russia”, “Denmark”, “Kazan”};
+        string[] itogArray = new [] {"", "", "", ""};
+
+        int k = 3;
+        int j = 0;
+
+        for(int i = 0; i < rowArray.Length; i++)
+        {
+            if(rowArray[i].Length <= k)
+            {
+                itogArray[j] = rowArray[i];
+                j++;
+            }
+        }
+
+        for(int i = 0; i < rowArray.Length; i++)
+        {
+            System.Console.WriteLine("Исходный массив:");
+            System.Console.Write($"{rowArray[i]}, ");
+        }
+
+        for(int i = 0; i < itogArray.Length; i++)
+        {
+            System.Console.WriteLine("Итоговый массив:");
+            System.Console.Write($"{itogArray[i]}, ");
+        }
     }
 }
