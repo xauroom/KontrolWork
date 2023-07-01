@@ -14,7 +14,7 @@ public static class Program
 {
     public static void Main()
     {
-        Console.Clear();
+        
         string[] rowArray = new [] {“Hello”, “2”, “world”, “:-)”, “1234”, “1567”, “-2”, “computer science”, “Russia”, “Denmark”, “Kazan”};
         string[] itogArray = new [] {"", "", "", ""};
 
@@ -27,18 +27,20 @@ public static class Program
             {
                 itogArray[j] = rowArray[i];
                 j++;
+                Array.Resize(ref itogArray, j + 1);
             }
         }
 
+        Console.Clear();
+        System.Console.WriteLine("Исходный массив:");
         for(int i = 0; i < rowArray.Length; i++)
-        {
-            System.Console.WriteLine("Исходный массив:");
             System.Console.Write($"{rowArray[i]}, ");
-        }
+        System.Console.WriteLine("\n");
 
+        string st = new String('=', 30);
+        System.Console.WriteLine(st);
+        System.Console.WriteLine("\nИтоговый массив:\n");
         for(int i = 0; i < itogArray.Length; i++)
-        {
-            System.Console.WriteLine("Итоговый массив:");
             System.Console.Write($"{itogArray[i]}, ");
         }
     }
