@@ -27,7 +27,7 @@ public static class Program
             {
                 itogArray[j] = rowArray[i];
                 j++;
-                Array.Resize(ref itogArray, j + 1);
+                Array.Resize(ref itogArray, j + 1); // Увеличение размера итогового массива
             }
         }
 
